@@ -8,6 +8,10 @@
     <title>MiniBlog</title>
 </head>
 <body>
-    @yield('content')
+   <div class="container">
+       @include('layouts.nav')
+       @include('layouts.content')
+       @include('layouts.footer')
+   </div>
 </body>
 </html>

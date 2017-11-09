@@ -1,7 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: jorge
- * Date: 09/11/17
- * Time: 11:39
- */
+<nav class="navbar">
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+    <hr>
+</nav>
