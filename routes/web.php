@@ -11,4 +11,12 @@
 |
 */
 
-Route::get('/','PostController@index');
+
+Route::prefix('/')->group(function () {
+    Route::get('', 'PostController@index');
+//    Route::get('post/{post}', 'PostController@show');
+    Route::prefix('post')->group(function () {
+        Route::get('create', 'PostController@create');
+    });
+});
+
