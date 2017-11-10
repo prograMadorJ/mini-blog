@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
 class PostController extends Controller
 {
     public function index() {
-        return view('posts.index');
+
+        $post = Post::all();
+
+        return view('posts.index',compact('post'));
     }
 
     public function show() {
@@ -18,4 +23,11 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-}
+
+    public function store()
+    {
+        Post::create(request()->all());
+
+        return redirect('/');
+    }
+ }
